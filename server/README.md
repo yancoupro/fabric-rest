@@ -12,10 +12,29 @@ Environment
 * `WEB_DIR` - location of web application (default is `www`)
 * `MIDDLEWARE_CONFIG_FILE` - middleware map file (default is `../middleware/map.json`)
 
+Build
+-----
+```
+cd server-prepare
+docker build -t atq/fabric-server
+cd ../server
+docker build -t atq/fabric-api
+
+```
+
+
 
 Launch
 ------
 Api web-interface become available on `http://localhost:4000` after launching:
+
+* ATQ
+```
+cd ../ledger
+docker-compose -f docker-compose-server-dev.yaml up
+```
+
+* Altoros
 
 ```
   npm install

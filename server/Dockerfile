@@ -1,7 +1,7 @@
 
-FROM maxxx1313/fabric-rest:core
+FROM atq/fabric-server
 
-LABEL com.altoros.version="0.10"
+LABEL ca.atq.version="0.01"
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,4 +9,5 @@ COPY . .
 
 EXPOSE 4000
 
+#CMD ["/bin/sh"]
 CMD [ "npm", "start" ]
